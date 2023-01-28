@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#replace name below with whatever text you want 
+
+echo "Which VPN would you like to run on startup?"
+echo "1) Hack The Box VPN"
+echo "2) Try Hack Me VPN"
+
+read -p "Enter your choice: " choice
+
+if [ "$choice" = "1" ]; then
+    sudo openvpn [your vpn file path]/[your vpn file].ovpn
+elif [ "$choice" = "2" ]; then
+    sudo openvpn [your vpn file path]/[your 2nd vpn file].ovpn
+else
+    echo "Invalid choice. Exiting."
+    exit 1
+fi
